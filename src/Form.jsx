@@ -10,6 +10,7 @@ function Form() {
             <Ingresar etiqueta="hora" tipo="time" nombre="hora" placeholder=""/>
             <label>Sintomas</label>
             <textarea name="sintomas" class="u-full-width"></textarea>
+            <Enviar />
         </form>
   )
 }
