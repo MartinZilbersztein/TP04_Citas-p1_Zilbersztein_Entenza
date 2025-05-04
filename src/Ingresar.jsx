@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Ingresar(etiqueta, tipo, nombre, holder) {
+function Ingresar({etiqueta, tipo, nombre, holder}) {
   return (
     <div>
         <label>{etiqueta}</label>
-        <input type={tipo} name={nombre} class="u-full-width" placeholder={holder}></input>
+        <input type={tipo} name={nombre} className="u-full-width" placeholder={holder}></input>
     </div>
   )
 }

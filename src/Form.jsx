@@ -10,7 +10,7 @@ export const Form = () => {
         <Ingresar etiqueta="Fecha" tipo="date" nombre="fecha" placeholder=""/>
         <Ingresar etiqueta="hora" tipo="time" nombre="hora" placeholder=""/>
         <label>Sintomas</label>
-        <textarea name="sintomas" class="u-full-width"></textarea>
+        <textarea name="sintomas" className="u-full-width"></textarea>
         <Enviar />
     </form>
 )
