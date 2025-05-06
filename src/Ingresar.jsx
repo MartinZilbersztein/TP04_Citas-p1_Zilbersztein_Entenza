@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Ingresar.css"
 
 function Ingresar({etiqueta, tipo, nombre, holder}) {
   return (

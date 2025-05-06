@@ -1,4 +1,5 @@
 import React from 'react'
+import './Cita.css'
 
 export const Cita = ({cita}) => {
   console.log(cita);

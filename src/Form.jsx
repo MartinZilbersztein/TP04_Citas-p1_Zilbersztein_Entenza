@@ -1,6 +1,7 @@
 import React from 'react'
 import Ingresar from './Ingresar'
 import {Enviar} from './Enviar'
+import './Form'
 
 export const Form = () => {
   return (
