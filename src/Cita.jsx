@@ -11,7 +11,7 @@ export const Cita = ({cita}) => {
         <p>Fecha: {cita.Fecha}</p>
         <p>Hora: {cita.Hora}</p>
         <p>Síntoma: {cita.Sintomas}</p>
-        <button class="button elimnar u-full-width">Eliminar ×</button>
+        <button className="button elimnar u-full-width">Eliminar ×</button>
       </div>
     </>
   )

@@ -3,13 +3,33 @@ import Ingresar from './Ingresar'
 import {Enviar} from './Enviar'
 import './Form'
 
-export const Form = () => {
+/*
+const citaNueva = () => {
+  const [formData, setFormData] = useState({
+    mascota: '',
+    propietario: '',
+    fecha: '',
+    hora: '',
+    sintomas: '',
+  });
+}
+*/
+const envio = (e) => {
+  
+}; 
+
+
+export const Form = ({listado, setLista}) => {
   return (
-    <form>
-        <Ingresar etiqueta="Nombre Mascota" tipo="text" nombre="mascota" placeholder="Nombre Mascota"/>
-        <Ingresar etiqueta="Nombre Dueño" tipo="text" nombre="propietaro" placeholder="Nombre dueño de la mascota"/>
-        <Ingresar etiqueta="Fecha" tipo="date" nombre="fecha" placeholder=""/>
-        <Ingresar etiqueta="hora" tipo="time" nombre="hora" placeholder=""/>
+    <form onSubmit={envio}>
+        <label>Nombre Mascota</label>
+        <input type="text" name="mascota" className="u-full-width" placeholder="Nombre Mascota"></input>
+        <label>Nombre Dueño</label>
+        <input type="text" name="propietario" className="u-full-width" placeholder="Nombre dueño de la mascota"></input>
+        <label>Fecha</label>
+        <input type="date" name="fecha" className="u-full-width" placeholder=""></input>
+        <label>Hora</label>
+        <input type="time" name="hora" className="u-full-width" placeholder=""></input>
         <label>Sintomas</label>
         <textarea name="sintomas" className="u-full-width"></textarea>
         <Enviar />

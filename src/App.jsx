@@ -14,7 +14,7 @@ function App() {
         <div className="row">
           <div className="one-half column">
             <h2>Crear mi Cita</h2>
-            <Form/>
+            <Form listado={lista} setLista={setLista}/>
           </div>
           <div className="one-half column">
             <h2>Administra tus citas</h2>
