@@ -1,7 +1,6 @@
 import React from 'react'
-import Ingresar from './Ingresar'
 import {Enviar} from './Enviar'
-import './Form'
+import './Form.css'
 
 /*
 const citaNueva = () => {
