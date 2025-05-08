@@ -13,14 +13,24 @@ const citaNueva = () => {
   });
 }
 */
-const envio = (e) => {
-  
-}; 
 
 
 export const Form = ({listado, setLista}) => {
+  const enviar = (e) => {
+    e.preventDefault();
+    let cita = {
+      mascota: e.mascota,
+      propietario: e.propietario,
+      fecha: new Date().toDateString(),
+      hora: new Date().getFullTime(),
+      sintomas: e.sintomas,
+    }
+    let aux = [...listado, cita];
+    setLista(aux);
+  }; 
+  
   return (
-    <form onSubmit={envio}>
+    <form onSubmit={enviar}>
         <label>Nombre Mascota</label>
         <input type="text" name="mascota" className="u-full-width" placeholder="Nombre Mascota"></input>
         <label>Nombre Dueño</label>
