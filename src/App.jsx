@@ -5,7 +5,7 @@ import './App.css'
 
 
 function App() {
-  const [lista, setLista] = useState([{Mascota: "Nina", Dueno: "Martín", Fecha: new Date().toDateString(), Hora: "8:20", Sintomas: "ladra"}]);
+  const [lista, setLista] = useState([]);
   return (
     <>
     <div id="root">
@@ -18,7 +18,7 @@ function App() {
           </div>
           <div className="one-half column">
             <h2>Administra tus citas</h2>
-            <Listado listado={lista}/>
+            <Listado listado={lista} setLista={setLista}/>
           </div>
         </div>
       </div>  

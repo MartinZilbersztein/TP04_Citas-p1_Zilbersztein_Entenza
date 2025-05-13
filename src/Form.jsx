@@ -18,12 +18,14 @@ const citaNueva = () => {
 export const Form = ({listado, setLista}) => {
   const enviar = (e) => {
     e.preventDefault();
+    console.log(listado);
     let cita = {
-      mascota: e.mascota,
-      propietario: e.propietario,
-      fecha: new Date().toDateString(),
-      hora: new Date().getFullTime(),
-      sintomas: e.sintomas,
+      Id: listado.length+1, 
+      Mascota: e.target[0].value,
+      Dueno: e.target[1].value,
+      Fecha: new Date(e.target[2].value).toDateString(), 
+      Hora: e.target[3].value,
+      Sintomas: e.target[4].value,
     }
     let aux = [...listado, cita];
     setLista(aux);
