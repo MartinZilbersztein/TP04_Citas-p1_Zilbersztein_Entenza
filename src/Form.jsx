@@ -23,11 +23,11 @@ export const Form = ({listado, setLista}) => {
     if(e.target[0].value != '' && e.target[1].value != '' && e.target[2].value != '' && e.target[3].value != '' && e.target[4].value != ''){
     let cita = {
       Id: listado.length+1, 
-      Mascota: e.target[0].value,
-      Dueno: e.target[1].value,
-      Fecha: new Date(e.target[2].value).toDateString(), 
-      Hora: e.target[3].value,
-      Sintomas: e.target[4].value,
+      Mascota: document.getElementById('mascota').value,
+      Dueno: document.getElementById('dueno').value,
+      Fecha: new Date(document.getElementById('fecha').value).toDateString(), 
+      Hora: document.getElementById('hora').value,
+      Sintomas: document.getElementById('sintomas').value,
     }
     console.log(e.target[0].value)
     let aux = [...listado, cita];
@@ -50,11 +50,11 @@ export const Form = ({listado, setLista}) => {
         <label>Nombre Mascota</label>
         <input  id="mascota" type="text" name="mascota" className="u-full-width" placeholder="Nombre Mascota"></input>
         <label>Nombre Dueño</label>
-        <input type="text" name="propietario" className="u-full-width" placeholder="Nombre dueño de la mascota"></input>
+        <input type="text" id="dueno" name="propietario" className="u-full-width" placeholder="Nombre dueño de la mascota"></input>
         <label>Fecha</label>
-        <input type="date" name="fecha" className="u-full-width" placeholder=""></input>
+        <input type="date" id="fecha" name="fecha" className="u-full-width" placeholder=""></input>
         <label>Hora</label>
-        <input type="time" name="hora" className="u-full-width" placeholder=""></input>
+        <input type="time" id="hora" name="hora" className="u-full-width" placeholder=""></input>
         <label>Sintomas</label>
         <textarea name="sintomas" className="u-full-width"></textarea>
         <p>{p}</p>
