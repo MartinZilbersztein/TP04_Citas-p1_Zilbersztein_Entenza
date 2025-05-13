@@ -23,11 +23,11 @@ export const Form = ({listado, setLista}) => {
     if(e.target[0].value != '' && e.target[1].value != '' && e.target[2].value != '' && e.target[3].value != '' && e.target[4].value != ''){
     let cita = {
       Id: listado.length+1, 
-      Mascota: document.getElementById('mascota').value,
-      Dueno: document.getElementById('dueno').value,
-      Fecha: new Date(document.getElementById('fecha').value).toDateString(), 
-      Hora: document.getElementById('hora').value,
-      Sintomas: document.getElementById('sintomas').value,
+      Mascota: e.target[0].value,
+      Dueno: e.target[1].value,
+      Fecha: new Date(e.target[2].value).toDateString(), 
+      Hora: e.target[3].value,
+      Sintomas: e.target[4].value,
     }
     console.log(e.target[0].value)
     let aux = [...listado, cita];
@@ -58,7 +58,7 @@ export const Form = ({listado, setLista}) => {
         <label>Sintomas</label>
         <textarea name="sintomas" className="u-full-width"></textarea>
         <p>{p}</p>
-        <Enviar onClick={check}/>
+        <Enviar />
     </form>
 )
 }
