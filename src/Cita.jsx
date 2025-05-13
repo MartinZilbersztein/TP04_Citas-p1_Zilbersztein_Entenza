@@ -3,6 +3,9 @@ import './Cita.css'
 
 export const Cita = ({cita}) => {
   console.log(cita);
+  const borrar = () => {
+    
+  }
   return (
     <>
       <div className='cita'>
@@ -11,7 +14,7 @@ export const Cita = ({cita}) => {
         <p>Fecha: {cita.Fecha}</p>
         <p>Hora: {cita.Hora}</p>
         <p>Síntoma: {cita.Sintomas}</p>
-        <button className="button elimnar u-full-width">Eliminar ×</button>
+        <button onClick={borrar} className="button elimnar u-full-width">Eliminar ×</button>
       </div>
     </>
   )
