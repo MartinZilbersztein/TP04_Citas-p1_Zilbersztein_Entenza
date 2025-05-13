@@ -6,7 +6,7 @@ export const Listado = ({listado, setLista}) => {
   return (
     <ul>
         {
-          listado.map(cita => (<Cita cita={cita} setLista={setLista}/>))
+          listado.map(cita => (<Cita cita={cita} listado={listado} setLista={setLista}/>))
         }
     </ul>
   )
