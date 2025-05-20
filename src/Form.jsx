@@ -24,8 +24,8 @@ export const Form = ({listado, setLista}) => {
       Id: listado.length+1, 
       Mascota: document.getElementById('mascota').value,
       Dueno:  document.getElementById('dueno').value,
-      Fecha: new Date(e.target[2].value).toDateString(), 
-      Hora: e.target[3].value,
+      Fecha: new Date(document.getElementById('fecha').value).toDateString(),
+      Hora: document.getElementById('hora').value,
       Sintomas: document.getElementById('sintomas').value,
     }
     
