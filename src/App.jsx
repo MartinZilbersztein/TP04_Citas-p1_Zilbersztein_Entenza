@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Listado } from './Listado'
 import { Form } from './Form'
 import './App.css'
@@ -6,6 +6,10 @@ import './App.css'
 
 function App() {
   const [lista, setLista] = useState([]);
+  useEffect(()=>{
+   setLista(JSON.parse(localStorage.getItem("citas"))); 
+  },[]);
+
   return (
     <>
     <div id="root">

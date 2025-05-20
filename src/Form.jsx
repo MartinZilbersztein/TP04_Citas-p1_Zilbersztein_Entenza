@@ -31,6 +31,7 @@ export const Form = ({listado, setLista}) => {
     }
     console.log(e.target[0].value)
     let aux = [...listado, cita];
+    localStorage.setItem("citas", JSON.stringify(aux));
     setLista(aux);
     setP("");
   }

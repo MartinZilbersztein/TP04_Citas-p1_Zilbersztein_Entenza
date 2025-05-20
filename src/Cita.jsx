@@ -13,6 +13,7 @@ export const Cita = ({cita, listado, setLista}) => {
     i++;
   }
   setLista(aux);
+  localStorage.setItem("citas", JSON.stringify(aux));
 } 
 return (
   <>
