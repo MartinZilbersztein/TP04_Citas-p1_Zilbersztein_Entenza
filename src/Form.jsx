@@ -18,18 +18,17 @@ const citaNueva = () => {
 export const Form = ({listado, setLista}) => {
   const [p, setP] = useState("");
   const enviar = (e) => {
-    e.preventDefault();
-    console.log(listado);
+    e.preventDefault();    
     if(e.target[0].value != '' && e.target[1].value != '' && e.target[2].value != '' && e.target[3].value != '' && e.target[4].value != ''){
     let cita = {
       Id: listado.length+1, 
-      Mascota: e.target[0].value,
-      Dueno: e.target[1].value,
+      Mascota: document.getElementById('mascota').value,
+      Dueno:  document.getElementById('dueno').value,
       Fecha: new Date(e.target[2].value).toDateString(), 
       Hora: e.target[3].value,
-      Sintomas: e.target[4].value,
+      Sintomas: document.getElementById('sintomas').value,
     }
-    console.log(e.target[0].value)
+    
     let aux = [...listado, cita];
     localStorage.setItem("citas", JSON.stringify(aux));
     setLista(aux);
@@ -40,12 +39,7 @@ export const Form = ({listado, setLista}) => {
   }
   }; 
 
-
   
-  const check = () =>{
-
-  }
-
   return (
     <form onSubmit={enviar}>
         <label>Nombre Mascota</label>
@@ -57,7 +51,7 @@ export const Form = ({listado, setLista}) => {
         <label>Hora</label>
         <input type="time" id="hora" name="hora" className="u-full-width" placeholder=""></input>
         <label>Sintomas</label>
-        <textarea name="sintomas" className="u-full-width"></textarea>
+        <textarea id="sintomas" name="sintomas" className="u-full-width"></textarea>
         <p>{p}</p>
         <Enviar />
     </form>

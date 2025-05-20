@@ -6,10 +6,9 @@ import './App.css'
 
 function App() {
   const [lista, setLista] = useState([]);
-  useEffect(()=>{
-   setLista(JSON.parse(localStorage.getItem("citas"))); 
+ useEffect(()=>{
+    setLista(JSON.parse(localStorage.getItem("citas"))); 
   },[]);
-
   return (
     <>
     <div id="root">
