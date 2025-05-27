@@ -17,19 +17,21 @@ const citaNueva = () => {
 
 export const Form = ({listado, setLista}) => {
   const [p, setP] = useState("");
+  let indice;
+  if (!listado) indice = 0; 
   const enviar = (e) => {
     e.preventDefault();    
     if(e.target[0].value != '' && e.target[1].value != '' && e.target[2].value != '' && e.target[3].value != '' && e.target[4].value != ''){
     let cita = {
-      Id: listado.length+1, 
+      Id: indice+1, 
       Mascota: document.getElementById('mascota').value,
       Dueno:  document.getElementById('dueno').value,
       Fecha: new Date(document.getElementById('fecha').value).toDateString(),
       Hora: document.getElementById('hora').value,
       Sintomas: document.getElementById('sintomas').value,
     }
-    
-    let aux = [...listado, cita];
+    let aux = [];
+    if (listado) aux= [...listado, cita]; else aux.push(cita); 
     localStorage.setItem("citas", JSON.stringify(aux));
     setLista(aux);
     setP("");
