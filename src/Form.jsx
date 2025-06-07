@@ -19,6 +19,7 @@ export const Form = ({listado, setLista}) => {
   const [p, setP] = useState("");
   let indice;
   if (!listado) indice = 0; 
+  else indice = listado.length; 
   const enviar = (e) => {
     e.preventDefault();    
     if(e.target[0].value != '' && e.target[1].value != '' && e.target[2].value != '' && e.target[3].value != '' && e.target[4].value != ''){
